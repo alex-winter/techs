@@ -1,0 +1,24 @@
+html, body {
+  height: 100%;
+}
+.techs-app {
+  background: #333;
+  height: 100%;
+  padding: 0;
+}
+.techs-app .header {
+  background: #222;
+}
+.techs-app .header h1 {
+  color: #fff;
+}
+.techs-app .header h1 .logo {
+  margin-left: 20px;
+}
+.techs-app .nav-list {
+  background: #fff;
+  height: 100%;
+}
+.techs-app .nav-list li a {
+  padding: 10px 0;
+}
