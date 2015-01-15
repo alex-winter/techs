@@ -15,8 +15,7 @@ class AddForeignKeysToActions extends Migration {
 		Schema::table('actions', function(Blueprint $table)
 		{
 			$table->foreign('job_id')->references('id')->on('jobs');
-			$table->foreign('user_id')->references('id')->on('users');
-			$table->foreign('branch_id')->references('id')->on('branches');
+			$table->foreign('created_by')->references('id')->on('users');
 		});
 	}
 
@@ -30,8 +29,7 @@ class AddForeignKeysToActions extends Migration {
 		Schema::table('actions', function(Blueprint $table)
 		{
 			$table->dropForeign('actions_job_id_foreign');
-			$table->dropForeign('actions_user_id_foreign');
-			$table->dropForeign('actions_branch_id_foreign');
+			$table->dropForeign('actions_created_by_foreign');
 		});
 	}
 

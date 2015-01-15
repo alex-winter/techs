@@ -17,6 +17,7 @@ class CreateMessagesTable extends Migration {
 			$table->increments('id');
 			$table->integer('taken_by')->unsigned();
 			$table->integer('branch_id')->unsigned();
+			$table->integer('created_by')->unsigned();
 			$table->string('title');
 			$table->string('subject');
 			$table->text('content', 2000);

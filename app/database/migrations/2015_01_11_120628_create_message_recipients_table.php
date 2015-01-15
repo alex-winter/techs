@@ -16,8 +16,7 @@ class CreateMessageRecipientsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('message_id')->unsigned();
-			$table->integer('user_id')->unsigned();
-			$table->integer('branch_id')->unsigned();
+			$table->integer('send_to')->unsigned();
 			$table->softDeletes();
 			$table->timestamps();
 		});

@@ -17,6 +17,7 @@ class CreateCustomersTable extends Migration {
 			$table->increments('id');
 			$table->integer('branch_id')->unsigned();
 			$table->integer('company_id')->unsigned();
+			$table->integer('created_by')->unsigned();
 			$table->string('forename');
 			$table->string('surname');
 			$table->string('landline');

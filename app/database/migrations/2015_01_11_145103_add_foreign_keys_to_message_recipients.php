@@ -15,8 +15,7 @@ class AddForeignKeysToMessageRecipients extends Migration {
 		Schema::table('message_recipients', function(Blueprint $table)
 		{
 			$table->foreign('message_id')->references('id')->on('messages');
-			$table->foreign('user_id')->references('id')->on('users');
-			$table->foreign('branch_id')->references('id')->on('branches');
+			$table->foreign('send_to')->references('id')->on('users');
 		});
 	}
 
@@ -30,8 +29,7 @@ class AddForeignKeysToMessageRecipients extends Migration {
 		Schema::table('message_recipients', function(Blueprint $table)
 		{
 			$table->dropForeign('message_recipients_message_id_foreign');
-			$table->dropForeign('message_recipients_user_id_foreign');
-			$table->dropForeign('message_branch_id_foreign');
+			$table->dropForeign('message_recipients__foreign');
 		});
 	}
 

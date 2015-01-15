@@ -16,6 +16,7 @@ class CreateCompaniesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('branch_id')->unsigned();
+			$table->integer('created_by')->unsigned();
 			$table->string('name');
 			$table->string('vat_number');
 			$table->string('landline');

@@ -17,6 +17,7 @@ class CreateDevicesTable extends Migration {
 			$table->increments('id');
 			$table->integer('manufacturer_id')->unsigned();
 			$table->integer('branch_id')->unsigned();
+			$table->integer('created_by')->unsigned();
 			$table->string('model');
 			$table->text('model_description');
 			$table->softDeletes();

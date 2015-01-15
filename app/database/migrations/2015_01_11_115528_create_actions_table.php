@@ -16,8 +16,7 @@ class CreateActionsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('job_id')->unsigned();
-			$table->integer('user_id')->unsigned();
-			$table->integer('branch_id')->unsigned();
+			$table->integer('created_by')->unsigned();
 			$table->text('description', 500);
 			$table->float('cost');
 			$table->softDeletes();

@@ -15,6 +15,7 @@ class CreateBranchesTable extends Migration {
 		Schema::create('branches', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('created_by')->unsigned();
 			$table->string('name');
 			$table->string('landline');
 			$table->string('email');

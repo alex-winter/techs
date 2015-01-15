@@ -16,6 +16,7 @@ class CreateManufacturersTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('branch_id')->unsigned();
+			$table->integer('created_by')->unsigned();
 			$table->string('name', 50);
 			$table->string('image');
 			$table->text('description', 500);
